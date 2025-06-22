@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+
+const WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbxo_uShAdsTnZiVVeFZBsUm4IvkP9oG_2oiTLJqFEOaN4aKIlG0S14cgb34nL_ibO9SAg/exec";
+
+/**
+ * Creates a json object including fields in the form
+ *
+ * @param {HTMLElement} form The form element to convert
+ * @return {Object} The form data
+ */
+const getFormJSON = (form) => {
+  const data = new FormData(form);
+  return Array.from(data.keys()).reduce((result, key) => {
+    if (result[key]) {
+      result[key] = data.getAll(key);
+      return result;
+    }
+    result[key] = data.get(key);
+    return result;
+  }, {});
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    fetch(WEB_APP_URL, {
+      method: "POST",
+      body: formData,
+    }).then((response) => {
+      if (!response.ok) {
+        console.error("Network response was not ok");
+        console.error(response);
+        throw new Error("Network response was not ok");
+      }
+    });
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <form method="POST" action={WEB_APP_URL} onSubmit={handleSubmit}>
+        <input name="Email" type="email" placeholder="Email" required />
+        <input name="Name" type="text" placeholder="Name" required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  );
 }
 
-export default App
+export default App;
