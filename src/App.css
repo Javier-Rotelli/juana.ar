@@ -1,42 +1,131 @@
+@import url(./fonts.css);
+body {
+  margin: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.screen:nth-child(1) {
+  background-color: #a9aa9a;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.screen:nth-child(2) {
+  background-color: #f4f0cd;
+}
+.screen:nth-child(3) {
+  background-color: #e4b8af;
+  h1 {
+    font-size: 124px;
+    line-height: 100%;
+    letter-spacing: 0%;
   }
 }
-
-.card {
-  padding: 2em;
+.screen:nth-child(4) {
+  background-color: #f4f0cd;
+}
+.screen:nth-child(5) {
+  background-color: #f1ede4;
 }
 
-.read-the-docs {
-  color: #888;
+h1 {
+  font-family: Caveat;
+  font-weight: 400;
+  font-style: Regular;
+}
+/* TODO: fix margin */
+.title-card {
+  width: 944px;
+  height: 607px;
+  background-image: url("/public/Frame\ Big.svg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  h1 {
+    font-family: Caveat;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 186px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-block-end: 0;
+  }
+  h2 {
+    font-family: Raleway;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+.chirimbolo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+
+  &.pareja {
+    width: 182px;
+    height: 253px;
+    top: 82px;
+    left: 48px;
+    background-image: url("/public/Couple.svg");
+  }
+
+  &.anillos {
+    width: 164px;
+    height: 144px;
+    top: 82px;
+    right: 48px;
+    background-image: url("/public/Rings.svg");
+  }
+
+  &.copas {
+    width: 197px;
+    height: 242px;
+    bottom: 60px;
+    left: 40px;
+    background-image: url("/public/Glasses.svg");
+  }
+
+  &.torta {
+    width: 200px;
+    height: 350px;
+    bottom: 33px;
+    right: 61px;
+    background-image: url("/public/Cake.svg");
+  }
+
+  &.angel {
+    width: 200px;
+    height: 200px;
+    top: 42px;
+    left: 123px;
+    background-image: url("/public/angel.svg");
+  }
+
+  &.copas2 {
+    width: 200px;
+    height: 200px;
+    bottom: 195px;
+    right: 0;
+    background-image: url("/public/Glasses_2.svg");
+  }
 }
