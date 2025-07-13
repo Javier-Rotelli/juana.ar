@@ -520,7 +520,33 @@ h1 {
     }
   }
 
-  .screen.fifth-page,
+  .screen.fifth-page {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh;
+    gap: 4vh;
+    .text {
+      text-align: center;
+      h1 {
+        font-size: 30vw;
+      }
+      h2 {
+        font-size: 8vw;
+      }
+      h3 {
+        font-size: 7vw;
+      }
+      p {
+        font-size: 6vw;
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
   .screen.sixth-page {
     flex-direction: column;
     align-items: center;
@@ -529,9 +555,6 @@ h1 {
       width: 100%;
       max-width: 300px;
     }
-  }
-
-  .screen.sixth-page {
     h1 {
       font-size: 15vw;
     }
