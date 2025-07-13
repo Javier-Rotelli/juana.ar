@@ -8,10 +8,7 @@ function SecondPage() {
 
       <img src="Image 1.png" />
       <img src="Image 2.png" />
-      <img
-        src="Image 3.png"
-        style={{ alignSelf: "flex-start", marginTop: 180 }}
-      />
+      <img src="Image 3.png" />
     </Page>
   );
 }
