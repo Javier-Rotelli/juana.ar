@@ -236,22 +236,23 @@ body {
     width: 500px;
   }
 
+  h1 {
+    margin-block: 0;
+    margin-bottom: 42px;
+    font-family: Caveat;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 124px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
   form {
     width: 625px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    h1 {
-      margin-block: 0;
-      margin-bottom: 42px;
-      font-family: Caveat;
-      font-weight: 400;
-      font-style: Regular;
-      font-size: 124px;
-      line-height: 100%;
-      letter-spacing: 0%;
-    }
     label {
       font-family: Raleway;
       font-weight: 600;
@@ -302,6 +303,21 @@ body {
         background-color: #e4b8af;
       }
     }
+
+    .error {
+      color: #e4b8af;
+      font-family: Raleway;
+      font-weight: 600;
+      font-style: SemiBold;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 16px;
+    }
+  }
+  .rsvp-success {
+    width: 625px;
+    animation: entrada 2s ease 0s 1 normal forwards;
   }
 }
 
@@ -316,6 +332,10 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
+
+  &:hover {
+    animation: chirimbolos 5s ease-in-out 0s infinite alternate none;
+  }
 
   &.pareja {
     width: 182px;
@@ -363,5 +383,97 @@ h1 {
     bottom: 195px;
     right: 0;
     background-image: url("/public/Glasses_2.svg");
+  }
+}
+
+@keyframes circle-in-hesitate {
+  0% {
+    clip-path: circle(0%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+}
+
+@keyframes entrada {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chirimbolos {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
   }
 }
