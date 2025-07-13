@@ -2,7 +2,7 @@ import Page from "./Page";
 
 function FirstPage() {
   return (
-    <Page>
+    <Page className="first-page">
       <div className="title-card">
         <h1>Ana & Juan</h1>
         <h2>se casan muy pronto!</h2>

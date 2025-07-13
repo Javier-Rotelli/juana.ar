@@ -11,31 +11,168 @@ body {
 
 .screen {
   position: relative;
-  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.screen:nth-child(1) {
+.screen.first-page {
   background-color: #a9aa9a;
+
+  /* TODO: fix margin */
+  .title-card {
+    width: 944px;
+    height: 607px;
+    background-image: url("/public/Frame\ Big.svg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h1 {
+      font-family: Caveat;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 186px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-block-end: 0;
+    }
+    h2 {
+      font-family: "Raleway";
+      font-weight: 600;
+      font-style: SemiBold;
+      font-size: 48px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+  }
 }
-.screen:nth-child(2) {
+.screen.second-page {
   background-color: #f4f0cd;
 }
-.screen:nth-child(3) {
-  background-color: #e4b8af;
+
+.screen.third-page {
+  background-color: #f1ede4;
+  flex-direction: column;
+  justify-content: flex-start;
+
   h1 {
     font-size: 124px;
     line-height: 100%;
     letter-spacing: 0%;
+    margin-block-start: 40px;
+  }
+
+  .datitas {
+    display: flex;
+    flex-direction: row;
+
+    font-family: "Raleway";
+    font-weight: 600;
+    font-style: SemiBold;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    .datita {
+      background-image: url("/public/frame.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 382px;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+
+      .datita-image {
+        margin-top: 40px;
+      }
+
+      .datita-text {
+        margin: 0 50px 60px 50px;
+        h2 {
+          font-size: 32px;
+        }
+
+        p {
+          text-align: left;
+          font-size: 16px;
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+      }
+    }
   }
 }
-.screen:nth-child(4) {
+
+.screen.fourth-page {
   background-color: #f4f0cd;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title-card {
+    width: 90%;
+    margin: 0 8rem;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      text-align: left;
+      h1 {
+        margin-block: unset;
+        font-weight: 400;
+        font-size: 124px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      h2 {
+        font-family: Raleway;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 48px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      h3 {
+        font-family: Raleway;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+
+      a {
+        display: inline-block;
+        background-color: #f1ede4;
+        border: 1px solid #2b683f;
+        border-radius: 100px;
+        padding: 4px 40px;
+        text-decoration: none;
+        color: #2b683f;
+        font-family: Raleway;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+
+    img {
+      width: 240px;
+    }
+  }
 }
-.screen:nth-child(5) {
+
+.screen.fifth-page {
   background-color: #f1ede4;
 }
 
@@ -43,36 +180,6 @@ h1 {
   font-family: Caveat;
   font-weight: 400;
   font-style: Regular;
-}
-/* TODO: fix margin */
-.title-card {
-  width: 944px;
-  height: 607px;
-  background-image: url("/public/Frame\ Big.svg");
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  h1 {
-    font-family: Caveat;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 186px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    margin-block-end: 0;
-  }
-  h2 {
-    font-family: Raleway;
-    font-weight: 600;
-    font-style: SemiBold;
-    font-size: 48px;
-    line-height: 100%;
-    letter-spacing: 0%;
-  }
 }
 
 .chirimbolo {

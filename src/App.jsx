@@ -1,8 +1,9 @@
 import "./App.css";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
-import Page from "./Page";
 import ThirdPage from "./ThirdPage";
+import FourthPage from "./FourthPage";
+import FifthPage from "./FifthPage";
 
 function App() {
   return (
@@ -10,9 +11,8 @@ function App() {
       <FirstPage />
       <SecondPage />
       <ThirdPage />
-      <Page></Page>
-      <Page></Page>
-      <Page></Page>
+      <FourthPage />
+      <FifthPage />
     </>
   );
 }

@@ -15,7 +15,7 @@ function Datita({ src, text, title }) {
 }
 function ThirdPage() {
   return (
-    <Page>
+    <Page className="third-page">
       <h1>Datita Importante</h1>
       <div className="datitas">
         <Datita
@@ -29,7 +29,7 @@ function ThirdPage() {
           text="Bienvenidos sombreros, anteojos de sol y todo accesorio que quieran sumar. Calzado amable para caminar y bailar sobre césped"
         />
         <Datita
-          src="datita1"
+          src="Music"
           title="Sumá tu música"
           text="Los invitamos a compartir sus canciones preferidas. Pueden adjuntar nombre y artista en el form de confirmación."
         />

@@ -1,5 +1,5 @@
-function Page({ children }) {
-  return <div className="screen">{children}</div>;
+function Page({ children, className }) {
+  return <div className={`screen ${className}`}>{children}</div>;
 }
 
 export default Page;

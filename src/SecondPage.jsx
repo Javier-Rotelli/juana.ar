@@ -2,7 +2,7 @@ import Page from "./Page";
 
 function SecondPage() {
   return (
-    <Page>
+    <Page className="second-page">
       <div className="chirimbolo angel" />
       <div className="chirimbolo copas2" />
 
