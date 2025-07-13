@@ -4,7 +4,7 @@ function Datita({ src, text, title }) {
   return (
     <div className="datita">
       <div className="datita-image">
-        <img src={`public/${src}.svg`} alt="Datita" />
+        <img src={`${src}.svg`} alt="Datita" />
       </div>
       <div className="datita-text">
         <h2>{title}</h2>

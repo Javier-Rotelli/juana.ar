@@ -90,7 +90,7 @@ function SixthPage() {
 
   return (
     <Page className="sixth-page">
-      <img src="public/Image 4.png" />
+      <img src="Image 4.png" />
       {!submitted ? (
         <RSVPForm onSubmited={setSubmitted} />
       ) : (

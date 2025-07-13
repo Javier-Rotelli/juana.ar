@@ -6,10 +6,10 @@ function SecondPage() {
       <div className="chirimbolo angel" />
       <div className="chirimbolo copas2" />
 
-      <img src="public/Image 1.png" />
-      <img src="public/Image 2.png" />
+      <img src="Image 1.png" />
+      <img src="Image 2.png" />
       <img
-        src="public/Image 3.png"
+        src="Image 3.png"
         style={{ alignSelf: "flex-start", marginTop: 180 }}
       />
     </Page>

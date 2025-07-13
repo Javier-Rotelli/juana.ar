@@ -24,7 +24,7 @@ body {
   .title-card {
     width: 944px;
     height: 607px;
-    background-image: url("/public/Frame\ Big.svg");
+    background-image: url("/Frame\ Big.svg");
     background-size: cover;
     background-position: center;
 
@@ -78,7 +78,7 @@ body {
     letter-spacing: 0%;
 
     .datita {
-      background-image: url("/public/frame.svg");
+      background-image: url("/frame.svg");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -342,7 +342,7 @@ h1 {
     height: 253px;
     top: 82px;
     left: 48px;
-    background-image: url("/public/Couple.svg");
+    background-image: url("/Couple.svg");
   }
 
   &.anillos {
@@ -350,7 +350,7 @@ h1 {
     height: 144px;
     top: 82px;
     right: 48px;
-    background-image: url("/public/Rings.svg");
+    background-image: url("/Rings.svg");
   }
 
   &.copas {
@@ -358,7 +358,7 @@ h1 {
     height: 242px;
     bottom: 60px;
     left: 40px;
-    background-image: url("/public/Glasses.svg");
+    background-image: url("/Glasses.svg");
   }
 
   &.torta {
@@ -366,7 +366,7 @@ h1 {
     height: 350px;
     bottom: 33px;
     right: 61px;
-    background-image: url("/public/Cake.svg");
+    background-image: url("/cake.svg");
   }
 
   &.angel {
@@ -374,7 +374,7 @@ h1 {
     height: 200px;
     top: 42px;
     left: 123px;
-    background-image: url("/public/angel.svg");
+    background-image: url("/angel.svg");
   }
 
   &.copas2 {
@@ -382,7 +382,7 @@ h1 {
     height: 200px;
     bottom: 195px;
     right: 0;
-    background-image: url("/public/Glasses_2.svg");
+    background-image: url("/Glasses_2.svg");
   }
 }
 

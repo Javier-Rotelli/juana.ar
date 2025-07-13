@@ -9,7 +9,7 @@ function FourthPage() {
           <h2>Sábado 6 de septiembre de 2025</h2>
           <h3>El evento comienza a las 14:00hs.</h3>
         </div>
-        <img src="public/Calendar.svg" alt="Ana & Juan" />
+        <img src="Calendar.svg" alt="Ana & Juan" />
       </div>
 
       <div className="title-card">
@@ -25,7 +25,7 @@ function FourthPage() {
             ver mapa
           </a>
         </div>
-        <img src="public/Table.svg" alt="Ana & Juan" />
+        <img src="Table.svg" alt="Ana & Juan" />
       </div>
     </Page>
   );

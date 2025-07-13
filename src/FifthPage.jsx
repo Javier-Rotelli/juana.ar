@@ -3,7 +3,7 @@ import Page from "./Page";
 function FifthPage() {
   return (
     <Page className="fifth-page">
-      <img src="public/flowers.svg" />
+      <img src="flowers.svg" />
       <div className="text">
         <h1>Regalo</h1>
         <h2>Alias: juanasecasa</h2>
