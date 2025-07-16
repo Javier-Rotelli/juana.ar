@@ -395,11 +395,20 @@ h1 {
   }
 }
 
+@media screen and (min-width: 1300px) {
+  .screen {
+    min-height: 1000px;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   #root {
     overflow: hidden;
   }
 
+  .screen {
+    min-height: 850px;
+  }
   .screen.first-page .title-card {
     width: 80%;
     height: 70%;
@@ -472,6 +481,9 @@ h1 {
 }
 
 @media screen and (max-width: 900px) {
+  .screen {
+    min-height: 100vh;
+  }
   .chirimbolo.pareja {
     width: 40vw;
     height: 50vw;
@@ -607,7 +619,7 @@ h1 {
   .screen.sixth-page {
     flex-direction: column;
     align-items: center;
-
+    padding: 4rem 0 2rem 0;
     img {
       width: 100%;
       max-width: 300px;
