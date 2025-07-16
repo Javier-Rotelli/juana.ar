@@ -623,7 +623,12 @@ h1 {
       input {
         width: 100%;
         max-width: 400px;
+        font-size: 24px;
+        margin-bottom: 28px;
       }
+    }
+    .rsvp-success {
+      width: 90%;
     }
   }
 }
