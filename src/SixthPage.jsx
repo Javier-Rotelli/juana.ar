@@ -3,7 +3,7 @@ import Page from "./Page";
 import { useFormStatus } from "react-dom";
 
 const WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbxq1NDh0X9xlNKFYb6I1FpqNmrv8jfmaoITO48ERSlaDvIqZNPpl2HmUztIiKLEfWmVVg/exec";
+  "https://script.google.com/macros/s/AKfycbwK-7yZTR_eXrWYEU20Mgbg-M4l4R09lr8erR5uwFlUWRPq6EJZd8gWmDa_UrmMpd17KA/exec";
 
 function Submit() {
   const status = useFormStatus();
