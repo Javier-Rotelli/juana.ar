@@ -3,12 +3,8 @@ import Page from "./Page";
 import { useFormStatus } from "react-dom";
 
 const WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbwK-7yZTR_eXrWYEU20Mgbg-M4l4R09lr8erR5uwFlUWRPq6EJZd8gWmDa_UrmMpd17KA/exec";
+  "https://script.google.com/macros/s/AKfycby7y1MZcv1WYyyHvPldjPmZL8i7I8ubXGve1hCtHSfLDHl_Uus97JAO79ppyUO3oJ2-JQ/exec";
 
-function Submit() {
-  const status = useFormStatus();
-  return <button disabled={status.pending}>Submit</button>;
-}
 
 function RSVPForm({ onSubmited }) {
   const [error, setError] = useState();
@@ -44,25 +40,12 @@ function RSVPForm({ onSubmited }) {
       onSubmit={handleSubmit}
       className="rsvp-form"
     >
-      <h1>Los esperamos!</h1>
+      <h1 className="title desktop">Los esperamos!</h1>
+      <p className="disclaimer">IMPORTANTE: Este formulario es individual y debe completarse por miembro de grupo familiar.</p>
       {error && <p className="error">{error}</p>}
-      <label htmlFor="Email">Email:</label>
+      <label htmlFor="nombre">Nombre y apellido*:</label>
       <input
-        name="Email"
-        type="email"
-        required
-        onInvalid={(e) => {
-          e.target.setCustomValidity("Por favor, ingresa un email válido.");
-        }}
-        onInput={(e) => {
-          e.target.setCustomValidity("");
-        }}
-      />
-      <label htmlFor="Asistentes">
-        Asistentes (indicar nombre y apellido):
-      </label>
-      <input
-        name="Asistentes"
+        name="nombre"
         type="text"
         required
         onInvalid={(e) => {
@@ -74,9 +57,57 @@ function RSVPForm({ onSubmited }) {
           e.target.setCustomValidity("");
         }}
       />
-      <label htmlFor="Restricciones">Restricciones alimentarias:</label>
-      <input name="Restricciones" type="text" />
-      <label htmlFor="cancion">Mi canción:</label>
+      <label htmlFor="mail">Mail*:</label>
+      <input
+        name="mail"
+        type="email"
+        required
+        onInvalid={(e) => {
+          e.target.setCustomValidity("Por favor, ingresa un email válido.");
+        }}
+        onInput={(e) => {
+          e.target.setCustomValidity("");
+        }}
+      />
+      <legend htmlFor="Restricciones">Restricciones alimentarias:</legend>
+      <fieldset className="radio-group">
+        <label>
+          <input type="radio" name="restricciones" value="no" />
+          No aplica
+        </label>
+        <label>
+          <input type="radio" name="restricciones" value="vegetariane" />
+          Vegetariano
+        </label>
+        <label>
+          <input type="radio" name="restricciones" value="vegane" />
+          Vegane
+        </label>
+        <label>
+          <input type="radio" name="restricciones" value="sin_tacc" />
+          Sin tacc
+        </label>
+      </fieldset>
+      <legend>Transporte:</legend>
+      <fieldset className="radio-group">
+        <label>
+          <input type="radio" name="transporte" value="no" />
+          No
+        </label>
+        <label>
+          <input type="radio" name="transporte" value="caba" />
+          Si(CABA)
+        </label>
+        <label>
+          <input type="radio" name="transporte" value="GBANorte" />
+          Si(GBA Norte)
+        </label>
+        <label>
+          <input type="radio" name="transporte" value="otros" />
+          Si(Otros)
+        </label>
+      </fieldset>
+      <label htmlFor="cancion">Canción sugerida:</label>
       <input name="cancion" type="text" />
       <button disabled={pending} type="submit">
         {!pending ? "CONFIRMAR ASISTENCIA" : "ENVIANDO..."}
@@ -90,6 +121,7 @@ function SixthPage() {
 
   return (
     <Page className="sixth-page">
+      <h1 className="title mobile">Los esperamos!</h1>
       <img src="Image 4.png" />
       {!submitted ? (
         <RSVPForm onSubmited={setSubmitted} />

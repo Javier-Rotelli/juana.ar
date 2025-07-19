@@ -3,6 +3,7 @@
 
 body {
   margin: 0;
+  font-family: Raleway;
 }
 
 #root {
@@ -254,6 +255,9 @@ body {
     font-size: 124px;
     line-height: 100%;
     letter-spacing: 0%;
+    &.mobile {
+      display: none;
+    }
   }
 
   form {
@@ -262,7 +266,28 @@ body {
     flex-direction: column;
     align-items: flex-start;
 
-    label {
+    input[type="radio"] {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 1em;
+      height: 1em;
+      border: 0.15em solid #d1d5db;
+      border-radius: 20%;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+
+      &:checked {
+        background-color: #2b683f;
+        border: 0.15em solid #2b683f;
+      }
+    }
+
+    label,
+    legend {
       font-family: Raleway;
       font-weight: 600;
       font-style: SemiBold;
@@ -270,6 +295,22 @@ body {
       line-height: 100%;
       letter-spacing: 0%;
       margin-bottom: 16px;
+    }
+
+    fieldset.radio-group {
+      border: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      margin-bottom: 42px;
+      label {
+        display: grid;
+        grid-template-columns: 1em auto;
+        gap: 0.5em;
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
 
     input {
@@ -397,7 +438,7 @@ h1 {
 
 @media screen and (min-width: 1300px) {
   .screen {
-    min-height: 1000px;
+    min-height: 857px;
   }
 }
 
@@ -571,16 +612,23 @@ h1 {
         text-align: center;
         margin: 0 20px;
         h1 {
+          font-family: "Caveat";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 74px;
+          line-height: 93px;
+
           font-size: 74px;
           margin-bottom: 40px;
         }
         h2 {
           font-size: 24px;
           font-weight: 600;
+          line-height: 28px;
         }
         h3 {
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 300;
         }
       }
       img {
@@ -598,16 +646,25 @@ h1 {
     .text {
       text-align: center;
       h1 {
-        font-size: 30vw;
+        font-family: "Caveat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 74px;
+        line-height: 93px;
       }
       h2 {
-        font-size: 8vw;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
       }
       h3 {
-        font-size: 7vw;
+        font-size: 24px;
+        font-weight: 400;
       }
       p {
-        font-size: 6vw;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
       }
     }
     img {
@@ -624,18 +681,44 @@ h1 {
       width: 100%;
       max-width: 300px;
     }
+    p.disclaimer {
+      font-size: 16px;
+      font-weight: normal;
+      text-align: left;
+      margin-block-end: 32px;
+    }
     h1 {
       font-size: 15vw;
+      margin-block-end: 44px;
+      &.desktop {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
     }
     form {
       width: 90%;
       max-width: 500px;
-      align-items: center;
+      align-items: flex-start;
 
+      label,
+      legend {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      fieldset.radio-group {
+        flex-wrap: wrap;
+        label {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
       input {
         width: 100%;
         max-width: 400px;
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 28px;
       }
     }
