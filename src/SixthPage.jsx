@@ -76,19 +76,19 @@ function RSVPForm({ onSubmited }) {
           No aplica
         </label>
         <label>
-          <input type="radio" name="restricciones" value="vegetariane" />
+          <input type="radio" name="restricciones" value="vegetariano" />
           Vegetariano
         </label>
         <label>
-          <input type="radio" name="restricciones" value="vegane" />
-          Vegane
+          <input type="radio" name="restricciones" value="vegano" />
+          Vegano
         </label>
         <label>
           <input type="radio" name="restricciones" value="sin_tacc" />
           Sin tacc
         </label>
       </fieldset>
-      <legend>Transporte:</legend>
+      <legend>Te interesa la opción traslado (combi)?</legend>
       <fieldset className="radio-group">
         <label>
           <input type="radio" name="transporte" value="no" />
@@ -122,7 +122,7 @@ function SixthPage() {
   return (
     <Page className="sixth-page">
       <h1 className="title mobile">Los esperamos!</h1>
-      <img src="Image 4.png" />
+      <img src="Boda.png" />
       {!submitted ? (
         <RSVPForm onSubmited={setSubmitted} />
       ) : (

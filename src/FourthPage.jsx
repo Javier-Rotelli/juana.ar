@@ -15,7 +15,7 @@ function FourthPage() {
 
         <div className="title-card">
           <div className="text">
-            <h1>Donde?</h1>
+            <h1>Dónde?</h1>
             <h2>Estancia Santa Elena</h2>
             <h3>Dr. Muñiz 720, Luján</h3>
             <a
